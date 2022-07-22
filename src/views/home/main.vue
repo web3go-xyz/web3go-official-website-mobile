@@ -235,7 +235,7 @@
           <img class="dot" src="@/assets/images/bluedot.png" alt="" />
           <el-carousel
             arrow="never"
-            :interval="7000"
+            :interval="15000"
             trigger="click"
             height="36.1rem"
             class="carousel"
@@ -420,6 +420,8 @@ export default {
       var box = document.querySelector(".el-carousel__container");
       var startPoint = 0;
       var stopPoint = 0;
+      var startPointY = 0;
+      var stopPointY = 0;
       //重置坐标
       var resetPoint = function () {
         startPoint = 0;
@@ -429,11 +431,13 @@ export default {
       box.addEventListener("touchstart", function (e) {
         //手指点击位置的X坐标
         startPoint = e.changedTouches[0].pageX;
+        startPointY = e.changedTouches[0].pageY;
       });
       //手指滑动
       box.addEventListener("touchmove", function (e) {
         //手指滑动后终点位置X的坐标
         stopPoint = e.changedTouches[0].pageX;
+        stopPointY = e.changedTouches[0].pageY;
       });
       //当手指抬起的时候，判断图片滚动离左右的距离
       let that = this;
@@ -442,12 +446,18 @@ export default {
           resetPoint();
           return;
         }
-        if (startPoint - stopPoint > 0) {
+        if (
+          startPoint - stopPoint > 0 &&
+          Math.abs(startPointY - stopPointY) < 20
+        ) {
           resetPoint();
           that.$refs.slideCarousel.next();
           return;
         }
-        if (startPoint - stopPoint < 0) {
+        if (
+          startPoint - stopPoint < 0 &&
+          Math.abs(startPointY - stopPointY) < 20
+        ) {
           resetPoint();
           that.$refs.slideCarousel.prev();
           return;
