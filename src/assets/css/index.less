@@ -1,0 +1,320 @@
+html,
+body {
+    font-family: "IBM Plex Sans", "Avenir", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(38, 38, 38, 0.2);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #ededed;
+}
+
+.hover-item {
+    cursor: pointer;
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.common-table-option {
+    cursor: pointer;
+    color: #4318FF;
+
+    &:hover {
+        color: #2200B7;
+    }
+
+    &+.common-table-option {
+        margin-left: 10px;
+    }
+}
+
+.layout {}
+
+ul li,
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft2 {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0) skewX(30deg)
+    }
+
+    60% {
+        opacity: 1;
+        transform: skewX(-20deg)
+    }
+
+    80% {
+        transform: skewX(5deg)
+    }
+
+    to {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+#body {
+
+    // el-table样式修改
+    .el-table__body {
+        border-spacing: 0 4px;
+        background: transparent;
+    }
+
+    .el-table tr {
+        background: #F4F7FE;
+    }
+
+    .el-table .el-table__cell {
+        padding: 18px 0;
+    }
+
+    .el-table__header-wrapper tr th {
+        background: #7551FF;
+        font-size: 16px;
+        color: #FFFFFF;
+        font-weight: 500;
+
+        &:first-child {
+            border-top-left-radius: 20px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 20px;
+        }
+    }
+
+    .el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell {
+        background: #E9E3FF;
+    }
+
+    .el-table__header-wrapper tr {
+        border-radius: 10px;
+    }
+
+    .el-table td.el-table__cell,
+    .el-table th.el-table__cell.is-leaf {
+        border-color: transparent;
+    }
+
+    .el-table--border .el-table__inner-wrapper::after,
+    .el-table--border::after,
+    .el-table--border::before,
+    .el-table__inner-wrapper::before {
+        background-color: transparent;
+    }
+
+    .el-table__body tr.hover-row.current-row>td.el-table__cell,
+    .el-table__body tr.hover-row.el-table__row--striped.current-row>td.el-table__cell,
+    .el-table__body tr.hover-row.el-table__row--striped>td.el-table__cell,
+    .el-table__body tr.hover-row>td.el-table__cell {
+        background: transparent;
+    }
+
+    .el-table__body tr.hover-row {
+        border-radius: 10px;
+
+        td {
+
+            &:first-child {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+    }
+
+    .el-table__body td {
+        font-size: 16px;
+        color: #2B3674;
+        font-weight: 500;
+    }
+
+
+    .el-table__expand-column {
+        .cell {
+            padding: 0 0 0 12px;
+        }
+    }
+
+    .el-table .table-option-icon {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    .el-table__expanded-cell {
+        padding: 0 !important;
+    }
+
+    // el-button
+    .el-button--primary {
+        border-radius: 70px;
+        box-shadow: 0px 15px 21px -2px rgb(202 198 248);
+    }
+
+
+    .el-button:hover,
+    .el-button:focus {
+        color: var(--el-button-hover-text-color);
+        border-color: #7551FF;
+        background-color: #7551FF;
+    }
+
+    .el-button.is-disabled,
+    .el-button.is-disabled:hover,
+    .el-button.is-disabled:focus {
+
+        background-color: #B9A2FF;
+        border-color: #B9A2FF;
+    }
+
+    .el-message--success {
+        width: 300px;
+        min-width: 300px;
+        background: #C9FBD5;
+        border-radius: 12px;
+        padding: 18px;
+
+        .el-message__content {
+            font-weight: 700;
+            font-size: 16px;
+            color: #01B574;
+
+        }
+
+        .el-message-icon--success {
+            color: #01B574;
+            background-image: url(~@/assets/images/yes.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 19px;
+
+            svg {
+                display: none;
+            }
+        }
+
+        .el-message__closeBtn {
+
+            color: #01B574;
+            background-image: url(~@/assets/images/g-close.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 13px;
+
+            svg {
+                display: none;
+            }
+        }
+    }
+
+    .el-message--warning {
+        width: 300px;
+        min-width: 300px;
+        background: #FFF6DA;
+        border-radius: 12px;
+        padding: 18px;
+
+        .el-message__content {
+            font-weight: 700;
+            font-size: 16px;
+            color: #FFBE18;
+
+        }
+
+        .el-message-icon--warning {
+            color: #FFBE18;
+            background-image: url(~@/assets/images/warning.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 1px;
+
+            svg {
+                display: none;
+            }
+        }
+
+        .el-message__closeBtn {
+            color: #FFBE18;
+            background-image: url(~@/assets/images/y-close.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 13px;
+
+            svg {
+                display: none;
+            }
+        }
+    }
+}
