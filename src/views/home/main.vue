@@ -45,7 +45,7 @@
               autoplay
               class="video"
               poster="@/assets/images/image26.png"
-              src="https://e-money.com/video/blockDashboard/dashboard.mp4"
+              src="@/assets/video.mp4"
               controls="controls"
             >
               your browser does not support the video tag
