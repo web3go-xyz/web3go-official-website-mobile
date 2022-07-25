@@ -40,7 +40,17 @@
         </div>
         <div class="video-wrap">
           <div class="video" @click="openVideo">
-            <video
+            <iframe
+              style="border-radius:5px;"
+              width="100%"
+              height="200rem"
+              src="https://www.youtube.com/embed/nWPv2bv-HiI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <!-- <video
               ref="video"
               autoplay
               class="video"
@@ -49,7 +59,7 @@
               controls="controls"
             >
               your browser does not support the video tag
-            </video>
+            </video> -->
           </div>
         </div>
       </div>
