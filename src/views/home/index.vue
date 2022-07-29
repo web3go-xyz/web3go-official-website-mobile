@@ -128,7 +128,7 @@
                 class="link"
                 @click="
                   jumpUrl(
-                    'https://www.youtube.com/channel/UCjsd_RBe4pyxtq_UEkxsDYQ'
+                    'https://www.youtube.com/channel/UCxUyipJO6O6LYNF-T7r-Kwg'
                   )
                 "
               >
