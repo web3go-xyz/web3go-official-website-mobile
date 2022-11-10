@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>
@@ -16,7 +17,7 @@
         // console.log(window.location);
         if (window.location.hostname != 'localhost') {
             var _hmt = _hmt || [];
-            (function() {
+            (function () {
                 var hm = document.createElement("script");
                 hm.src = "https://hm.baidu.com/hm.js?a3ee85f45e553d5d9068a1bd48a670ea";
                 var s = document.getElementsByTagName("script")[0];
@@ -24,18 +25,28 @@
             })();
         }
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L96P2RVG4Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-L96P2RVG4Q');
+    </script>
 </head>
 
 <body id="body">
     <noscript>
         <strong>We're sorry but Web3Go Official doesn't work properly without JavaScript enabled.
             Please enable it to continue.</strong>
-        </noscript>
+    </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </body>
 
 </html>
