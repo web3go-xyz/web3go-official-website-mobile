@@ -36,6 +36,9 @@
             <div class="logo">
               <img src="@/assets/images/logo(3).png" alt="" />
             </div>
+            <div class="binance">
+              <img src="@/assets/images/image43.png" alt="" />
+            </div>
             <div class="icons">
               <img
                 title="Github"
@@ -104,7 +107,10 @@
               >
                 Discord
               </div>
-              <div class="link" @click="jumpUrl('https://t.me/Web3GoCommunity')">
+              <div
+                class="link"
+                @click="jumpUrl('https://t.me/Web3GoCommunity')"
+              >
                 Telegram
               </div>
               <div class="link" @click="jumpUrl('https://web3go.medium.com/')">
@@ -383,6 +389,15 @@ export default {
         text-align: center;
         margin-bottom: 48px;
         .logo {
+          img {
+            height: 56px;
+          }
+        }
+        .binance {
+          margin-top: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           img {
             height: 56px;
           }

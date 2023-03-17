@@ -41,7 +41,7 @@
         <div class="video-wrap">
           <div class="video" @click="openVideo">
             <iframe
-              style="border-radius:5px;"
+              style="border-radius: 5px"
               width="100%"
               height="200rem"
               src="https://www.youtube.com/embed/nWPv2bv-HiI"
@@ -226,6 +226,9 @@
         <span> Investors </span>
       </div>
       <div v-moveUp="0.4" class="logo-list">
+        <div class="img-wrap">
+          <img :src="require('@/assets/images/image43.png')" alt="" />
+        </div>
         <div v-for="v in 5" :key="v" class="img-wrap">
           <img :src="require('@/assets/images/iv' + v + '.png')" alt="" />
         </div>
@@ -1052,27 +1055,33 @@ export default {
       height: 70px;
       &:nth-of-type(1) {
         img {
-          height: 22px;
+          height: 31px;
         }
       }
       &:nth-of-type(2) {
         justify-content: flex-end;
         img {
-          height: 41px;
+          height: 22px;
         }
       }
       &:nth-of-type(3) {
         img {
-          height: 39px;
+          height: 41px;
         }
       }
       &:nth-of-type(4) {
         justify-content: flex-end;
         img {
-          height: 30px;
+          height: 39px;
         }
       }
       &:nth-of-type(5) {
+        img {
+          height: 30px;
+        }
+      }
+      &:nth-of-type(6) {
+        justify-content: flex-end;
         img {
           height: 31px;
         }
