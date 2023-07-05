@@ -161,7 +161,7 @@ export function fullScreenDom(id) {
     el.style.zIndex = 9999;
 }
 
-const identity_api_path = "https://web3go.xyz/polkadot-identity/polkadot-identity-analysis/getIdentityInfo";
+const identity_api_path = "https://app.web3go.xyz/polkadot-identity/polkadot-identity-analysis/getIdentityInfo";
 
 //const identity_api_path = "http://localhost:20006/polkadot-identity-analysis/getIdentityInfo";
 export async function loadAddressIdentityAsync(addressInfo) {
